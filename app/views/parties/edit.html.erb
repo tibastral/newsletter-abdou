@@ -1,0 +1,24 @@
+<h1>Editing party</h1>
+
+<% form_for([@newsletter, @party]) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :day %><br />
+    <%= f.date_select :day %>
+  </p>
+  <p>
+    <%#= f.label :newsletter %><br />
+    <%#= f.collection_select(:newsletter_id, Newsletter.find(:all), :id, :name, {:prompt => true})  %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', newsletter_party_path(@newsletter, @party) %> |
+<%= link_to 'Back', newsletter_parties_path(@newsletter) %>

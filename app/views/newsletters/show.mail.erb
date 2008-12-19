@@ -1,0 +1,55 @@
+<html>
+<p>
+  <b>Name:</b>
+  <%=h @newsletter.name %>
+</p>
+
+<p>
+  <b>Artist name:</b>
+  <%=h @newsletter.artist_name %>
+</p>
+
+<p>
+  <b>Artist caption:</b>
+  <%= textilize @newsletter.artist_caption %>
+</p>
+
+<p>
+  <b>Party name:</b>
+  <%=h @newsletter.party_name %>
+</p>
+
+<p>
+  <b>Party cost:</b>
+  <%=h @newsletter.party_cost %>
+</p>
+
+<p>
+  <b>Party adress:</b>
+  <%=h @newsletter.party_adress %>
+</p>
+
+<p>
+  <b>Party description:</b>
+  <%=h @newsletter.party_description %>
+</p>
+
+<p>
+    <%= image_tag "http://tamerer#{@newsletter.artist_photo.url}"%>
+</p>
+
+<div class="parties">
+    <h2>Soirées<h2>
+    <p>
+        <%= render :partial => @newsletter.party, :locals => {:focus => @newsletter.party} %>
+        <%= render :partial => @newsletter.parties.reject{|party| party == @newsletter.party}, :locals => {:focus => @newsletter.party} %>
+    </p>
+</div>
+
+<div class="actus">
+    <h2>Actualités</h2>
+    <p>
+        <%= render :partial => @newsletter.actus %>
+    </p>
+</div>
+</html>

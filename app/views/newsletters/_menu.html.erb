@@ -1,0 +1,9 @@
+<div id="menu">
+    <ul>
+        <% if @newsletter %>
+        <li><%= link_to "all newsletters", newsletters_path %></li>
+        <li><%= link_to "parties", newsletter_parties_path(@newsletter) %></li>
+        <li><%= link_to "actus", newsletter_actus_path(@newsletter) %></li>
+        <% end %>
+    </ul>
+</div>

@@ -1,0 +1,49 @@
+<h1>Editing newsletter</h1>
+
+<% form_for(@newsletter, :html => {:multipart => true}) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :artist_name %><br />
+    <%= f.text_field :artist_name %>
+  </p>
+  <p>
+    <%= f.label :artist_caption %><br />
+    <%= f.text_area :artist_caption %>
+  </p>
+  <p>
+    <%= f.label :party_name %><br />
+    <%= f.text_field :party_name %>
+  </p>
+  <p>
+    <%= f.label :party_cost %><br />
+    <%= f.text_field :party_cost %>
+  </p>
+  <p>
+    <%= f.label :party_adress %><br />
+    <%= f.text_area :party_adress %>
+  </p>
+  <p>
+    <%= f.label :party_description %><br />
+    <%= f.text_area :party_description %>
+  </p>
+  <p>
+    <%= f.label :artist_photo %>
+    <%= f.file_field :artist_photo %>
+  </p>
+  
+  <p>
+     <%= f.collection_select(:party_id, @newsletter.parties, :id, :name, {:prompt => true}) %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'liste des soirées', newsletter_parties_path(@newsletter)%>
+<%= link_to 'Show', @newsletter %> |
+<%= link_to 'Back', newsletters_path %>

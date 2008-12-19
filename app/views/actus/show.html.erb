@@ -1,0 +1,18 @@
+<p>
+  <b>Title:</b>
+  <%=h @actu.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @actu.description %>
+</p>
+
+<p>
+  <b>Newsletter:</b>
+  <%=h @actu.newsletter %>
+</p>
+
+
+<%= link_to 'Edit', edit_newsletter_actu_path(@newsletter, @actu) %> |
+<%= link_to 'Back', newsletter_actus_path(@newsletter) %>

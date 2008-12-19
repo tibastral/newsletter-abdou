@@ -1,0 +1,18 @@
+<p>
+  <b>Name:</b>
+  <%=h @party.name %>
+</p>
+
+<p>
+  <b>Day:</b>
+  <%=h @party.day %>
+</p>
+
+<p>
+  <b>Newsletter:</b>
+  <%=h @party.newsletter %>
+</p>
+
+
+<%= link_to 'Edit', edit_newsletter_party_path(@newsletter, @party) %> |
+<%= link_to 'Back', newsletter_parties_path(@newsletter) %>

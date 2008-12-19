@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  artist_name: MyString
+  artist_caption: MyText
+  party_name: MyString
+  party_cost: MyString
+  party_adress: MyText
+  party_description: MyText
+
+two:
+  name: MyString
+  artist_name: MyString
+  artist_caption: MyText
+  party_name: MyString
+  party_cost: MyString
+  party_adress: MyText
+  party_description: MyText

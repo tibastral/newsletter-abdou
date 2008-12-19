@@ -1,0 +1,23 @@
+<h1>Listing actus</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Newsletter</th>
+  </tr>
+
+<% for actu in @actus %>
+  <tr>
+    <td><%=h actu.title %></td>
+    <td><%=h actu.description %></td>
+    <td><%= link_to 'Show', newsletter_actu_path(@newsletter, actu) %></td>
+    <td><%= link_to 'Edit', edit_newsletter_actu_path(@newsletter, actu) %></td>
+    <td><%= link_to 'Destroy', newsletter_actu_path(@newsletter, actu), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New actu', new_newsletter_actu_path(@newsletter) %>

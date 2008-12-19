@@ -1,0 +1,7 @@
+.party, .actu {
+    border : 1px solid black;
+}
+
+.focus {
+    background-color : red;
+}
